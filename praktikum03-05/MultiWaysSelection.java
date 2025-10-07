@@ -18,8 +18,10 @@ public class MultiWaysSelection {
             } else {
                 if (kodeKampus.equals("TUP")) {
                     System.out.println("Kampus Purwokerto");
-                } else {
+                } else if(kodeKampus == "TUS") {
                     System.out.println("Kampus Surabaya");
+                } else{
+                    System.out.println("KODE YANG ANDA MASUKKAN SALAH WOI");
                 }
             }
         }
