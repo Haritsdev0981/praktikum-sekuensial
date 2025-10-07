@@ -9,5 +9,14 @@ public class TernaryOperatorExample {
         // Menggunakan ternary operator untuk menentukan nilai terbesar 
         int nilaiTerbesar = (a > b) ? a : b;
         System.out.println("Nilai terbesar adalah: " + nilaiTerbesar);
+
+
+        // Ternary Operator : menentukan kelulusan
+        
+        int nilai = 78;
+
+        // Menentukan kelulusan dengan ternary operator
+        String hasil = (nilai >= 75) ? "Lulus" : "Tidak Lulus";
+        System.out.println("Hasil: " + hasil);
     }
 }
