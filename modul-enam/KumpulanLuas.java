@@ -9,6 +9,12 @@ public class KumpulanLuas {
         return "Luas segitiga= " + luasSegitiga;
     }
 
+    public static double LuangLingkaran(int jari) {
+        double luasLingkaran;
+        luasLingkaran = jari * jari;
+        return luasLingkaran;
+    }
+
     public static void main(String[] args) {
         System.out.println(LuasSegitiga(10, 5));
         System.out.println(LuasSegitiga(6, 9));
