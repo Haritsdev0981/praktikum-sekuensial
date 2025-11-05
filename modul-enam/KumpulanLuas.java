@@ -18,7 +18,6 @@ public class KumpulanLuas {
         System.out.print("Masukkan jari-jari: ");
         jari = scanner.nextInt();
         System.out.println("Luas Lingkkaran: "+LuasLingkaran(jari));
-        scanner.close();
     }
 
     public static double LuasSegitiga(int alas, int tinggi) {
@@ -38,8 +37,11 @@ public class KumpulanLuas {
     public static void main(String[] args) {
 
         int pilihan;
+        String ulang;
         System.out.print("Pilih menu [1:Luas Segitiga, 2:Luas Lingkaran]");
         pilihan = scanner.nextInt();
+
+        do{
         switch (pilihan) {
             case 1:
                 HitungLuasSegitiga();
@@ -53,6 +55,9 @@ public class KumpulanLuas {
                 System.out.println("Pilihan Salah!!");
                 break;
         }
+        System.out.print("Hitung lagi [Y/N]? ");
+        ulang = scanner.next();
+    }while (ulang.equalsIgnoreCase("Y"));
     }
         
 }
