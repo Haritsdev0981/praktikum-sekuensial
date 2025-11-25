@@ -29,7 +29,7 @@ public class TugasAkhir {
 
         }
 
-        System.out.println("=== Program Rekap Kehadiran Siswa ===");
+        System.out.println("\n=== Program Rekap Kehadiran Siswa ===");
         for(int i=0; i< jumlahKelas; i++){
             System.out.println("Kelas ke-" + (i+1) + "i");
 

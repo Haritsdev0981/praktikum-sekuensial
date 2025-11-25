@@ -22,28 +22,27 @@ public class TugasAkhirM {
 
     }
 
-    public static void tampilKehadiran(String[] kehadiran){
-         for (int i = 0; i < kehadiran.length; i++) {
-            System.out.print("Siswa ke -" +kehadiran[i]);
+    public static int jumlahRekap(String[] kehadiran) {
+        int count = 0;
+        for (String kode : kehadiran) {
+            if (!kode.equals("H")) {
+                count++;
+
+            }
+        }
+        return count;
+    }
+
+    public static void tampilKehadiran(int nokls, String[] kehadiran) {
+        for (int i = 0; i < kehadiran.length; i++) {
+            System.out.print("Siswa ke - "+ nokls + ": " + kehadiran[i]);
 
             System.out.println("");
 
         }
 
         int tidakHadir = jumlahRekap(kehadiran);
-        System.out.print("Jumlah siswa tidak hadir :" +tidakHadir);
-    }
-
-    public static int jumlahRekap (String[] kehadiran){
-        int count = 0;
-        for (String kode :kehadiran) {
-            if (!kode.equals("H")) {
-            count++;
-        
-        }
-    }
-        return count;
-        
+        System.out.println("Jumlah siswa tidak hadir :" + tidakHadir);
     }
 
     public static void main(String[] args) {
@@ -65,10 +64,11 @@ public class TugasAkhirM {
 
         }
 
-        for (int j = 0; j < jumlahKelas; j++) {
-            tampilKehadiran(kehadiran[j]);
-        }
+        System.out.println("\n=== Program Rekap Kehadiran Siswa ===");
 
+        for (int j = 0; j < jumlahKelas; j++) {
+            tampilKehadiran((j+1), kehadiran[j]);
+        }
 
     }
 }
